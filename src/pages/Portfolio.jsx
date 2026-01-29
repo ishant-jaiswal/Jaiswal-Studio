@@ -94,7 +94,7 @@ const Portfolio = () => {
                         </motion.p>
                     </div>
                     <motion.a
-                        href="https://www.instagram.com/jaiswalstudio"
+                        href="https://www.instagram.com/jaiswalstudiox?utm_source=qr&igsh=c2cwd2k0aTB1aGQ4"
                         target="_blank"
                         rel="noopener noreferrer"
                         initial={{ opacity: 0 }}
