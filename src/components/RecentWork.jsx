@@ -7,17 +7,20 @@ const RecentWork = () => {
         {
             title: "The Udaipur Grandeur",
             category: "Luxury Wedding",
-            image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2940&auto=format&fit=crop"
+            image: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=2940&auto=format&fit=crop",
+            reelUrl: "https://www.instagram.com/jaiswalstudiox?utm_source=qr&igsh=c2cwd2k0aTB1aGQ4"
         },
         {
             title: "Varanasi Soul",
             category: "Intimate Ceremony",
-            image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2787&auto=format&fit=crop"
+            image: "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?q=80&w=2787&auto=format&fit=crop",
+            reelUrl: "https://www.instagram.com/jaiswalstudiox?utm_source=qr&igsh=c2cwd2k0aTB1aGQ4"
         },
         {
             title: "Jaipur Heritage",
             category: "Royal Celebration",
-            image: "https://images.unsplash.com/photo-1587271407850-8d438913d2cd?q=80&w=2942&auto=format&fit=crop"
+            image: "https://images.unsplash.com/photo-1587271407850-8d438913d2cd?q=80&w=2942&auto=format&fit=crop",
+            reelUrl: "https://www.instagram.com/jaiswalstudiox?utm_source=qr&igsh=c2cwd2k0aTB1aGQ4"
         }
     ];
 
@@ -48,13 +51,16 @@ const RecentWork = () => {
 
                 <div className="grid md:grid-cols-3 gap-8">
                     {works.map((work, index) => (
-                        <motion.div
+                        <motion.a
                             key={index}
+                            href={work.reelUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: index * 0.2 }}
-                            className="group relative cursor-pointer overflow-hidden aspect-[3/4]"
+                            className="group relative cursor-pointer overflow-hidden aspect-[3/4] block"
                         >
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-500 z-10"></div>
                             <img
@@ -75,12 +81,12 @@ const RecentWork = () => {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </motion.a>
                     ))}
                 </div>
 
                 <div className="text-center mt-16">
-                    <a href="#" className="inline-block px-8 py-3 border border-white/20 hover:border-primary hover:text-primary transition-colors duration-300 uppercase tracking-widest text-sm">View All Stories</a>
+                    <a href="https://www.instagram.com/jaiswalstudiox?utm_source=qr&igsh=c2cwd2k0aTB1aGQ4" className="inline-block px-8 py-3 border border-white/20 hover:border-primary hover:text-primary transition-colors duration-300 uppercase tracking-widest text-sm">View All Stories</a>
                 </div>
             </div>
         </section>
